@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Livros;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\UserLivro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LivrosController extends Controller
 {
@@ -54,6 +55,50 @@ class LivrosController extends Controller
         return redirect()->route('livros.index');
     }
 
+
+    public function agendamento()
+    {
+        $livros = Livros::select("livros.*")
+        ->get();    
+
+        return view('livros.agendamento', compact('livros'));
+    }
+
+    public function agendar($id_livro)
+    { 
+        $livro = Livros::find($id_livro);
+        $livro->status = 0;   	    
+        $livro->save();
+
+        $user_livro = new UserLivro();
+        $user_livro->id_livro = $id_livro;
+        $user_livro->id_user = Auth::user()->id;
+        $user_livro->save();
+
+        return redirect()->route('livros.agendamento');
+    }
+
+public function meus_agendamentos()
+    {
+        $livros = Livros::select("livros.*")
+        ->leftJoin("user_livros", "livros.id", "user_livros.id_livro")
+        ->where("user_livros.id_user", Auth::user()->id)
+        ->get();    
+        return view('livros.meus_agendamentos', compact('livros'));
+
+    }    
+
+    public function remover_agendamento($id_livro)
+    { 
+        $livro = Livros::find($id_livro);
+        $livro->status = 1;   	    
+        $livro->save();
+
+        $user_livro = UserLivro::where("id_livro",$id_livro)->first();
+        $user_livro->delete();
+
+        return redirect()->route('livros.meus_agendamentos');
+    }
 
 
 
