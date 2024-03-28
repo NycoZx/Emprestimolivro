@@ -3,9 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div>
+            <h1>Registre novos livros</h1>
+        </div>
+        <p></p>
         <div class="col-md-12">
             <div>
-                <a class="btn btn-primary" href="{{route('livros.create')}}" role="button">Criar</a>
+                <a class="btn btn-primary" href="{{route('livros.create')}}" role="button">Inserir Livro</a>
+                <p></p>
             </div>
             <table class="table">
                 <thead>

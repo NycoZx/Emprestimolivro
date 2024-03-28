@@ -19,9 +19,22 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="titulo">
+                <h1>ReadBook</h1>
+            </div>
+           
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Nicolas') }}
+                <a class="navbar-brand livros-btn" href="../livros">
+                    Inserir novos livros
+                </a>
+                <a class="navbar-brand agendamento-btn" href="../agendamento">
+                    Agende seu livro
+                </a>
+                <a class="navbar-brand meus-btn" href="../meus_agendamentos">
+                    Meus agendamentos
+                </a>
+                <a class="navbar-brand btn btn-primary livros-btn" href="#  " target="_blank">
+                    Apresentação 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -76,5 +89,75 @@
             @yield('content')
         </main>
     </div>
+    <style>
+        .livros-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.livros-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.agendamento-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.agendamento-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.meus-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.meus-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.titulo{
+    padding: 10px 20px;
+    
+}
+
+.dropdown-toggle{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown-toggle:hover{
+    background-color: #0056b3;
+    color: #fff;
+}
+    </style>
 </body>
 </html>

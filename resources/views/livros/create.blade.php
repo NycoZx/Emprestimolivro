@@ -7,8 +7,8 @@
             <form action="{{route("livros.store")}}" method="POST" class="row g-3">
                 @csrf
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do livro" name="nome">
+                <label for="exampleFormControlInput1" class="form-label">Nome do livro</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome" name="nome">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Fornecedor</label>
@@ -23,8 +23,13 @@
                 <button type="submit" class="btn btn-primary mb-3">Salvar</button>
               </div>
             </form>
-            
         </div>
     </div>
 </div>
 @endsection
+
+
+
+
+
+

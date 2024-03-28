@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+      <div>
+        <h1>Meus livros agendados</h1>
+      </div>
         <div class="col-md-12">
             <table class="table">
                 <thead>
@@ -26,6 +29,7 @@
                 </tbody>
               </table>
         </div>
+
     </div>
 </div>
 
