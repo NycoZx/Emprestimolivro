@@ -8,7 +8,7 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Fornecedor</th>
                     <th scope="col">Ações</th>
@@ -23,13 +23,13 @@
                         @if ($livro->status == 1)
                         <td><a class="btn btn-primary" href="{{route('livros.agendar', $livro->id)}}" role="button">Agendar</a></td>
                         @else
-                        <td><p>Indisponível</p></td>  
+                        <td><p>Agendado / Indisponível</p></td>    
                         @endif
                       </tr>
                     @endforeach
                   
                 </tbody>
-              </table>
+              </table>  
         </div>
     </div>
 </div>

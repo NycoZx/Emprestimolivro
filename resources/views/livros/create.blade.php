@@ -8,7 +8,7 @@
                 @csrf
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nome do livro</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome" name="nome">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome" name="nome" required>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Fornecedor</label>
@@ -19,6 +19,14 @@
                     <option value="Saraiva">Saraiva</option>
                   </select>
               </div>
+              <div class="form-group">
+                <label for="fornecedor">Fornecedor</label>
+                <select class="form-control" id="fornecedor" name="fornecedor">
+                    <option value="Livraria Cultura">Livraria Cultura</option>
+                    <option value="Livraria da Vida">Livraria da Vida</option>
+                    <option value="Saraiva">Saraiva</option>
+                </select>
+            </div>
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">Salvar</button>
               </div>

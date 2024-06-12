@@ -22,7 +22,7 @@
             <div class="titulo">
                 <h1>ReadBook</h1>
             </div>
-           
+
             <div class="container">
                 <a class="navbar-brand livros-btn" href="../livros">
                     Inserir novos livros
@@ -30,11 +30,14 @@
                 <a class="navbar-brand agendamento-btn" href="../agendamento">
                     Agende seu livro
                 </a>
+                <a class="navbar-brand agendamento-btn" href="../doacao/formulario">
+                    Doe seu livro
+                </a>
                 <a class="navbar-brand meus-btn" href="../meus_agendamentos">
                     Meus agendamentos
                 </a>
-                <a class="navbar-brand btn btn-primary livros-btn" href="#  " target="_blank">
-                    Apresentação 
+                <a class="navbar-brand btn btn-primary livros-btn" href="https://www.youtube.com/watch?v=IsFA_VJk2_E" target="_blank">
+                    Apresentação
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -90,6 +93,7 @@
         </main>
     </div>
     <style>
+
         .livros-btn{
     display: inline-block;
     padding: 10px 20px;
@@ -140,7 +144,7 @@
 
 .titulo{
     padding: 10px 20px;
-    
+
 }
 
 .dropdown-toggle{
@@ -158,6 +162,7 @@
     background-color: #0056b3;
     color: #fff;
 }
+
     </style>
 </body>
 </html>

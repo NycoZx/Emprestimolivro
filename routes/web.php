@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LivrosController;
+use App\Http\Controllers\DoacaoLivroController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +34,16 @@ Route::post('/livros/update/{id}',[LivrosController::class,'update'])->name('liv
 Route::get('/livros/destroy/{id}',[LivrosController::class,'destroy'])->name('livros.destroy');
 Route::get('/agendamento',[LivrosController::class,'agendamento'])->name('livros.agendamento');
 Route::get('/agendamento/agendar/{id}',[LivrosController::class,'agendar'])->name('livros.agendar');
-Route::get('/meus_agendamentos',[LivrosController::class,'meus_agendamentos'])->name('livros.meus_agendamentos');   
+Route::get('/meus_agendamentos',[LivrosController::class,'meus_agendamentos'])->name('livros.meus_agendamentos');
 Route::get('/meus_agendamentos/destroy/{id}',[LivrosController::class,'remover_agendamento'])->name('livros.remover_agendamento');
+
+
+Route::get('/doacao/formulario', [DoacaoLivroController::class, 'mostrarFormulario'])->name('doacao.formulario');
+Route::post('/doacao/doar', [DoacaoLivroController::class, 'doarLivro'])->name('doacao.doar');
+Route::get('/doacao/sucesso', function () {
+    return 'Doação realizada com sucesso!';
+})->name('doacao.sucesso');
+
 
 
 });
