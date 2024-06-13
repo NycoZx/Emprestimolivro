@@ -75,12 +75,11 @@
         <label for="estado">Estado de Uso "Novo" ou "Velho":</label>
         <input type="text" id="estado" name="estado" required>
 
-        <label for="livraria">Para qual livraria:</label>
+        <label for="livraria">Origem:</label>
         <select id="livraria" name="livraria" required>
-            <option value="">Selecione a livraria</option>
-            <option value="Saraiva">Saraiva</option>
-            <option value="Livraria Cultura">Livraria Cultura</option>
-            <option value="Livraria da Vida">Livraria da Vida</option>
+            <option value="">Selecione a origem (opcional)</option>
+            <option value="Saraiva">Desconhecido</option>
+
         </select>
 
         <label for="fornecedor">Formato:</label>
