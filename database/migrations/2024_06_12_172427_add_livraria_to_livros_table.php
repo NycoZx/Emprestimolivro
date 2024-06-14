@@ -14,7 +14,7 @@ class AddLivrariaToLivrosTable extends Migration
     public function up()
     {
         Schema::table('livros', function (Blueprint $table) {
-            $table->string('livraria')->after('estado'); // Adicione a coluna livraria após a coluna estado
+            $table->string('livraria')->nullable(); // Adicione a coluna livraria após a coluna estado
         });
     }
 

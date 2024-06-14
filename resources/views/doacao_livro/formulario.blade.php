@@ -72,7 +72,7 @@
         <label for="nome">Nome do Livro:</label>
         <input type="text" id="nome" name="nome" required>
 
-        <label for="estado">Estado de Uso "Novo" ou "Velho":</label>
+        <label for="estado">Estado de Uso "Novo" ou "Usado":</label>
         <input type="text" id="estado" name="estado" required>
 
         <label for="livraria">Origem:</label>
@@ -81,9 +81,6 @@
             <option value="Saraiva">Desconhecido</option>
 
         </select>
-
-        <label for="fornecedor">Formato:</label>
-        <input type="text" id="fornecedor" name="fornecedor" value="Doação">
 
         <div class="button-container">
             <button type="submit">Doar</button>

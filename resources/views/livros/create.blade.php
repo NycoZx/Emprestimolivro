@@ -18,14 +18,7 @@
                     <option value="Livraria da vida">Livraria da vida</option>
                     <option value="Saraiva">Saraiva</option>
                   </select>
-              </div>
-              <div class="form-group">
-                <label for="fornecedor">Fornecedor</label>
-                <select class="form-control" id="fornecedor" name="fornecedor">
-                    <option value="Livraria Cultura">Livraria Cultura</option>
-                    <option value="Livraria da Vida">Livraria da Vida</option>
-                    <option value="Saraiva">Saraiva</option>
-                </select>
+                </div>
             </div>
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">Salvar</button>

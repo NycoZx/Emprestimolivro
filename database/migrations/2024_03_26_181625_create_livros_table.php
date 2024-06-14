@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('livros', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('fornecedor');
+            $table->string('fornecedor')->nullable();
             $table->timestamps();
         });
     }

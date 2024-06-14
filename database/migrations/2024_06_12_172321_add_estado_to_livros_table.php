@@ -14,7 +14,7 @@ class AddEstadoToLivrosTable extends Migration
     public function up()
     {
         Schema::table('livros', function (Blueprint $table) {
-            $table->string('estado')->after('nome'); // Adicione a coluna estado após a coluna nome
+            $table->string('estado')->nullable();  // Adicione a coluna estado após a coluna nome
         });
     }
 

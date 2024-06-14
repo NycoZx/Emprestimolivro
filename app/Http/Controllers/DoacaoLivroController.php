@@ -19,7 +19,7 @@ class DoacaoLivroController extends Controller
             'nome' => 'required|string|max:255',
             'estado' => 'required|string|max:255',
             'livraria' => 'required|string|max:255',
-            'fornecedor' => 'required|string|max:255', // Certifique-se de validar o fornecedor
+
         ]);
 
         // Criar um novo livro com os dados fornecidos
@@ -27,7 +27,7 @@ class DoacaoLivroController extends Controller
             'nome' => $request->nome,
             'estado' => $request->estado,
             'livraria' => $request->livraria,
-            'fornecedor' => $request->fornecedor,
+
         ]);
 
         // Redirecionar após a criação do livro
